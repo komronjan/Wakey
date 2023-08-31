@@ -9,3 +9,14 @@ C:\Users\Admin\Desktop\MyProject\Wakey\Domain\obj\Debug\net7.0\Domain.dll
 C:\Users\Admin\Desktop\MyProject\Wakey\Domain\obj\Debug\net7.0\refint\Domain.dll
 C:\Users\Admin\Desktop\MyProject\Wakey\Domain\obj\Debug\net7.0\Domain.pdb
 C:\Users\Admin\Desktop\MyProject\Wakey\Domain\obj\Debug\net7.0\ref\Domain.dll
+C:\Users\пк\Desktop\Wakey\Domain\bin\Debug\net7.0\Domain.deps.json
+C:\Users\пк\Desktop\Wakey\Domain\bin\Debug\net7.0\Domain.dll
+C:\Users\пк\Desktop\Wakey\Domain\bin\Debug\net7.0\Domain.pdb
+C:\Users\пк\Desktop\Wakey\Domain\obj\Debug\net7.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\пк\Desktop\Wakey\Domain\obj\Debug\net7.0\Domain.AssemblyInfoInputs.cache
+C:\Users\пк\Desktop\Wakey\Domain\obj\Debug\net7.0\Domain.AssemblyInfo.cs
+C:\Users\пк\Desktop\Wakey\Domain\obj\Debug\net7.0\Domain.csproj.CoreCompileInputs.cache
+C:\Users\пк\Desktop\Wakey\Domain\obj\Debug\net7.0\Domain.dll
+C:\Users\пк\Desktop\Wakey\Domain\obj\Debug\net7.0\refint\Domain.dll
+C:\Users\пк\Desktop\Wakey\Domain\obj\Debug\net7.0\Domain.pdb
+C:\Users\пк\Desktop\Wakey\Domain\obj\Debug\net7.0\ref\Domain.dll

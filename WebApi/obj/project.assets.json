@@ -2105,19 +2105,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Admin\\.nuget\\packages\\": {}
+    "C:\\Users\\пк\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Admin\\Desktop\\MyProject\\Wakey\\WebApi\\WebApi.csproj",
+      "projectUniqueName": "C:\\Users\\пк\\Desktop\\Wakey\\WebApi\\WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "C:\\Users\\Admin\\Desktop\\MyProject\\Wakey\\WebApi\\WebApi.csproj",
-      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Admin\\Desktop\\MyProject\\Wakey\\WebApi\\obj\\",
+      "projectPath": "C:\\Users\\пк\\Desktop\\Wakey\\WebApi\\WebApi.csproj",
+      "packagesPath": "C:\\Users\\пк\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\пк\\Desktop\\Wakey\\WebApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\пк\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2131,11 +2131,11 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "C:\\Users\\Admin\\Desktop\\MyProject\\Wakey\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\MyProject\\Wakey\\Domain\\Domain.csproj"
+            "C:\\Users\\пк\\Desktop\\Wakey\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\пк\\Desktop\\Wakey\\Domain\\Domain.csproj"
             },
-            "C:\\Users\\Admin\\Desktop\\MyProject\\Wakey\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Admin\\Desktop\\MyProject\\Wakey\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\пк\\Desktop\\Wakey\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\пк\\Desktop\\Wakey\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }

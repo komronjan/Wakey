@@ -9,6 +9,8 @@ namespace Domain.Dtos.Account
 {
     public class UserRegisterDto
     {
+        [Required(ErrorMessage = "Please fill up username")]
+        public string Username { get; set; }
 
         [Required(ErrorMessage = "Please fill up email address")]
         [EmailAddress]
