@@ -3,6 +3,7 @@ using System.Text;
 using Infrastructure.Context;
 using Infrastructure.Services;
 using Infrastructure.Services.AccountService;
+using Infrastructure.Services.CountService;
 using Infrastructure.Services.FileService;
 using Infrastructure.Services.UserService;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -24,6 +25,7 @@ builder.Services.AddDbContext<DataContext>(conf => conf.UseNpgsql(connection));
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IFileService, FileService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ICountService, CountService  >();
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(config =>
 {
     config.Password.RequiredLength = 4;
