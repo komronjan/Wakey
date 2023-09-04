@@ -24,8 +24,8 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Count", b =>
                 {
-                    b.Property<DateTime>("Date")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<int>("UserId")
+                        .HasColumnType("integer");
 
                     b.Property<long>("Diamonds")
                         .HasColumnType("bigint");
@@ -36,7 +36,7 @@ namespace Infrastructure.Migrations
                     b.Property<long>("Steps")
                         .HasColumnType("bigint");
 
-                    b.HasKey("Date");
+                    b.HasKey("UserId");
 
                     b.ToTable("Counts");
                 });
@@ -61,7 +61,7 @@ namespace Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("UserName")
+                    b.Property<string>("ProfileImage")
                         .IsRequired()
                         .HasColumnType("text");
 
@@ -266,6 +266,17 @@ namespace Infrastructure.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Domain.Entities.Count", b =>
+                {
+                    b.HasOne("Domain.Entities.User", "User")
+                        .WithOne("Count")
+                        .HasForeignKey("Domain.Entities.Count", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -314,6 +325,12 @@ namespace Infrastructure.Migrations
                         .WithMany()
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Domain.Entities.User", b =>
+                {
+                    b.Navigation("Count")
                         .IsRequired();
                 });
 #pragma warning restore 612, 618

@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\пк\\Desktop\\Wakey\\WebApi\\WebApi.csproj": {}
+    "C:\\Users\\Admin\\Desktop\\Wakey2\\WebApi\\WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\пк\\Desktop\\Wakey\\Domain\\Domain.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Wakey2\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\пк\\Desktop\\Wakey\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Wakey2\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\пк\\Desktop\\Wakey\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\пк\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\пк\\Desktop\\Wakey\\Domain\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Wakey2\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Wakey2\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\пк\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -39,6 +39,12 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.1.34, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -59,17 +65,17 @@
         }
       }
     },
-    "C:\\Users\\пк\\Desktop\\Wakey\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Wakey2\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\пк\\Desktop\\Wakey\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Wakey2\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\пк\\Desktop\\Wakey\\Infrastructure\\Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\пк\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\пк\\Desktop\\Wakey\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Wakey2\\Infrastructure\\Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Wakey2\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\пк\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -83,8 +89,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\пк\\Desktop\\Wakey\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\пк\\Desktop\\Wakey\\Domain\\Domain.csproj"
+              "C:\\Users\\Admin\\Desktop\\Wakey2\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\Wakey2\\Domain\\Domain.csproj"
               }
             }
           }
@@ -156,17 +162,17 @@
         }
       }
     },
-    "C:\\Users\\пк\\Desktop\\Wakey\\WebApi\\WebApi.csproj": {
+    "C:\\Users\\Admin\\Desktop\\Wakey2\\WebApi\\WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\пк\\Desktop\\Wakey\\WebApi\\WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Desktop\\Wakey2\\WebApi\\WebApi.csproj",
         "projectName": "WebApi",
-        "projectPath": "C:\\Users\\пк\\Desktop\\Wakey\\WebApi\\WebApi.csproj",
-        "packagesPath": "C:\\Users\\пк\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\пк\\Desktop\\Wakey\\WebApi\\obj\\",
+        "projectPath": "C:\\Users\\Admin\\Desktop\\Wakey2\\WebApi\\WebApi.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Desktop\\Wakey2\\WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\пк\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -180,11 +186,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\пк\\Desktop\\Wakey\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\пк\\Desktop\\Wakey\\Domain\\Domain.csproj"
+              "C:\\Users\\Admin\\Desktop\\Wakey2\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\Wakey2\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\пк\\Desktop\\Wakey\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\пк\\Desktop\\Wakey\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\Admin\\Desktop\\Wakey2\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Desktop\\Wakey2\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }

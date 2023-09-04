@@ -28,7 +28,7 @@ namespace Infrastructure.Services.AccountService
         }
         public async Task<Response<string>> JWTLogin(JWTLoginDto model)
         {
-            var user = await userManager.FindByNameAsync(model.UserName);
+            var user = await userManager.FindByEmailAsync(model.Email);
             if (user != null)
             {
             var checkPassword = await userManager.CheckPasswordAsync(user, model.Password);
@@ -38,45 +38,48 @@ namespace Infrastructure.Services.AccountService
                 return new Response<string>(token);
                 }
             }
-            return new Response<string>(HttpStatusCode.BadRequest, "UserName or Password is incorrect");
+            return new Response<string>(HttpStatusCode.BadRequest, "Email or Password is incorrect");
         }
         //Method to generate The Token
         private async Task<string> GenerateJwtToken(IdentityUser user)
         {
-            var key = Encoding.UTF8.GetBytes(configuration["JWT: KEY"]);
-            var securitykey = new SymmetricSecurityKey(key);
-            var credentials = new SigningCredentials(securitykey, SecurityAlgorithms.HmacSha256);
-            //claims 
+            // key
+            var key = Encoding.UTF8.GetBytes(configuration["Jwt:Key"]);
+            var securityKey = new SymmetricSecurityKey(key);
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+            // claims
             var claims = new List<Claim>()
-            {
-                new Claim(JwtRegisteredClaimNames.Name , user.UserName),
-                new Claim(JwtRegisteredClaimNames.Email , user.Email)
-            };
-            //roles
+        {
+            new Claim(JwtRegisteredClaimNames.Name, user.UserName),
+            new Claim(JwtRegisteredClaimNames.Email, user.Email),
+        };
+
+            //add roles
             var roles = await userManager.GetRolesAsync(user);
             claims.AddRange(roles.Select(role => new Claim(ClaimTypes.Role, role)));
-            //Token for Admin
+            // token from all Informations
             var token = new JwtSecurityToken(
-               issuer: configuration["JWT:Issuer"],
-               audience: configuration["JWT:Audience"],
-               claims: claims,
-               expires: DateTime.UtcNow.AddHours(10000000000000000000),
-               signingCredentials: credentials
-                );
-            return new JwtSecurityTokenHandler().WriteToken(token);
+                issuer: configuration["Jwt:Issuer"],
+                audience: configuration["Jwt:Audience"],
+                claims: claims,
+                expires: DateTime.UtcNow.AddHours(1),
+                signingCredentials: credentials
+            );
+
+            return new JwtSecurityTokenHandler().WriteToken(token); //
         }
 
         public async Task<Response<IdentityUser>> LoginAsync(UserLoginDto model)
         {
-            var existing = await userManager.FindByNameAsync(model.UserName);
+            var existing = await userManager.FindByEmailAsync(model.Email);
             if (existing == null)
             {
-                return new Response<IdentityUser>(HttpStatusCode.BadRequest, "Username or Password is incorrect");
+                return new Response<IdentityUser>(HttpStatusCode.BadRequest, "Email or Password is incorrect");
             }
             var checkPassword = await userManager.CheckPasswordAsync(existing, model.Password);
             if (!checkPassword)
             {
-               return new Response<IdentityUser>(HttpStatusCode.BadRequest, "Username or Password is incorrect");
+               return new Response<IdentityUser>(HttpStatusCode.BadRequest, "Email or Password is incorrect");
             }
             var claims = new List<Claim>()
             {
