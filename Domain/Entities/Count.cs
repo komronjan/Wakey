@@ -11,16 +11,16 @@ namespace Domain.Entities
     public class Count
     {
         [Key]
-        public int UserId { get; set; } // Внешний ключ для User
+    public int UserId { get; set; } // Внешний ключ для User
 
-        // Определите навигационное свойство к сущности User
-        public User User { get; set; }
+    // Определите навигационное свойство к сущности User
+    public User User { get; set; }
 
-        [NotNull]
-        public long Steps { get; set; }
-        [NotNull]
-        public long Diamonds { get; set; }
-        [NotNull]
-        public long ScoreColoriya { get; set; }
+    [NotNull]
+    public long Steps { get; set; }
+    [NotNull]
+    public long Diamonds { get; set; }
+    [NotNull]
+    public long ScoreColoriya { get; set; }
     }
 }
